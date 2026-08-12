@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SafEat | From the Nature</title>
+  <meta name="description" content="SafEat spices, rice powders, coconut oil and natural food products.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="container nav">
+      <a class="brand" href="#"><img src="assets/safeat-logo.png" alt="SafEat"></a>
+      <nav>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cart" onclick="toggleCart()">Cart <span id="count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">SAFETY • QUALITY • NATURE</p>
+          <h1>Pure ingredients.<br><span>Authentic taste.</span></h1>
+          <p class="lead">Shop SafEat spices, rice powders, coconut oil and everyday essentials made with care.</p>
+          <a class="btn" href="#shop">Shop Now</a>
+        </div>
+        <div class="hero-card">
+          <img src="assets/safeat-logo.png" alt="SafEat logo">
+          <strong>From the nature</strong>
+          <small>Clean • Hygienic • Quality</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="section">
+      <div class="container">
+        <h2>Shop by Category</h2>
+        <div class="cats">
+          <button onclick="filter('Spices')">Spices</button>
+          <button onclick="filter('Rice Powders')">Rice Powders</button>
+          <button onclick="filter('Coconut Oil')">Coconut Oil</button>
+          <button onclick="filter('Flours')">Flours</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section products">
+      <div class="container">
+        <div class="section-head"><h2>Featured Products</h2><button class="clear" onclick="filter('All')">View All</button></div>
+        <div id="grid" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="trust">
+      <div class="container trust-grid">
+        <div><b>100%</b><span>Quality focused</span></div>
+        <div><b>Fresh</b><span>Carefully packed</span></div>
+        <div><b>Safe</b><span>Hygienic processing</span></div>
+        <div><b>Easy</b><span>Online ordering</span></div>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cartPanel" class="cart-panel">
+    <div class="cart-head"><h3>Your Cart</h3><button onclick="toggleCart()">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-total">Total: ₹<span id="total">0</span></div>
+    <button class="btn full" onclick="checkout()">Proceed to Checkout</button>
+  </aside>
+  <div id="shade" class="shade" onclick="toggleCart()"></div>
+
+  <footer id="contact">
+    <div class="container footer">
+      <div><img src="assets/safeat-logo.png" alt="SafEat"></div>
+      <p>SafEat — From the nature.</p>
+      <p>© 2026 SafEat. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
